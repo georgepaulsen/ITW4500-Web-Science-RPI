@@ -6,7 +6,7 @@ const fs = require('fs');
 const app = express();
 const port = 3000;
 const mongoose = require('mongoose');
-const atlas_url ='mongodb+srv://mongomarty:Creator4453@cluster0-eqahj.mongodb.net/lab6'
+const atlas_url ='mongodb+srv://username:password@cluster0-eqahj.mongodb.net/lab6'
 const json2csv = require('json2csv').parse;
 
 
