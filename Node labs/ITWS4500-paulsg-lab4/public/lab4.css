@@ -1,0 +1,77 @@
+body {
+   background-color: rgb(22, 22, 22);
+   color: rgb(59, 255, 249);
+}
+
+.active-cyan-4 input[type=text]:focus:not([readonly]) {
+   background-color: rgb(49, 65, 82);
+   padding: 5px;
+   border-radius: 10px;
+   border: 1px solid #4dd0e1;
+   box-shadow: 0 0 0 1px #4dd0e1;
+}
+
+.active-cyan-3 input[type=text], .active-cyan-3 input[type=submit]  {
+   margin: auto;
+   display: block;
+   background-color: rgb(28, 37, 47);
+   padding: 5px;
+   border-radius: 10px;
+   border: 1px solid #4dd0e1;
+   box-shadow: 0 0 0 1px #4dd0e1;
+}
+
+.card {
+   background-color: rgb(28, 37, 47);
+   padding: 1%;
+}
+.searchBar{
+   margin:auto;
+   width: 100%;
+}
+
+.searchBar, #name, {
+   background-color: rgb(28, 37, 47);
+   border-radius: 10px;
+   padding: 5px;
+}
+
+#search, #headline {
+   border-radius: 10px;
+   background-color: rgb(28, 37, 47);
+   border: none;
+   color: white;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding: 7px;
+}
+
+#search:hover, #headline:hover {
+   background-color: rgb(49, 65, 82);
+   transition: .3s;
+}
+
+h1 {
+   padding: 20px;
+   /* color: rgb(84, 129, 199); */
+   color: rgb(135, 180, 231);
+}
+
+img {
+   border-radius: 5px;
+   margin: auto;
+}
+
+.center {
+   margin: auto;
+   padding: 10px;
+}
+
+h4 {
+   padding: 5px;
+   color: rgb(42, 205, 94);
+}
+
+.likes {
+   color:
+}

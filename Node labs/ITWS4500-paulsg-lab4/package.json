@@ -1,0 +1,13 @@
+{
+  "name": "lab4",
+  "version": "1.0.0",
+  "description": "lab4 package file",
+  "main": "lab4.js",
+  "author": "Martin Paulsen - Paulsg",
+  "license": "ISC",
+  "repository": "None",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "express": "^4.17.1"
+  }
+}

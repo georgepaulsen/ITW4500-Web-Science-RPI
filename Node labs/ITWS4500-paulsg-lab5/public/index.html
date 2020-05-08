@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" sameSite="none">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <title>Paulsg Lab 5</title>
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link rel="stylesheet" href="lab5.css">
+</head>
+<!-- angular module and controller function will be acceessible over the whole body -->
+
+<body ng-app="newsApp" ng-controller="ctrNews">
+
+   <h1 class="text-center display-3">Lab 5 Mongo Madness</h1>
+<!-- buttons to populate, display, export and reset the database -->
+   <form class="active-cyan-3 active-cyan-4 mb-4 searchBar text-center">
+      <input type="text" id="name" name="keyW" ng-model="keyW" placeholder="Keyword Search" />
+      <input type="submit" id="search" value="Search & Populate DB" ng-click="populateDB()" />
+      <input type="submit" id="headline" name="headlines" value="Read DB" ng-click="displayDB()" />
+      <select style="background-color: rgb(135, 180, 231);" ng-model="selectedType" ng-options="x for x in types">
+      </select>
+      <input type="submit" id="exportDB" name="exportDB" value="Export DB" ng-click="exportDB()" />
+      <input type="submit" id="resetDB" name="resetDB" value="Reset DB" ng-click="resetDB()" />
+   </form>
+   <div class="container">
+      <div class="row">
+         <!-- after display is fired, all articles in the database are looped through and displayed  -->
+         <section ng-repeat="article in news" class="col-sm-6 card">
+            <h4 class='text-center'> {{article.title}}</h4>
+            <a href="{{article.url}}">
+               <img class="img-thumbnail rounded mx-auto d-block" default="" ng-src="{{article.urlToImage}}" alt="article image">
+            </a>
+            <p class="center">{{article.description}}</p>
+            <h5 class=text-center>{{article.author}}</h5>
+            <p class="text-center">{{article.source.name}}</p>
+         </section>
+      </div>
+   </div>
+</body>
+<!-- scripts at bottom for better load time -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+<script type="text/javascript" src="lab5.js"></script>
+
+</html>

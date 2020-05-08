@@ -1,0 +1,60 @@
+body{
+   background-color: rgb(22, 22, 22);
+   color:rgb(59, 255, 249);
+}
+
+.card{
+   /* background-color: rgb(38, 38, 38); */
+   background-color: rgb(28, 37, 47);
+   padding: 1%;
+}
+.sbar{
+   background-color: rgb(28, 37, 47);
+   margin: auto;
+}
+
+h1{
+   padding: 20px;
+   /* color: rgb(84, 129, 199); */
+   color: rgb(135, 180, 231);
+}
+img{
+   border-radius: 5px;
+   margin: auto;
+}
+.topU{
+   padding: 5px;
+   color: rgb(42, 205, 94);
+}
+.likes{
+   color:
+}
+/* bootstrap sidebar */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    font-family: 'Sriracha', cursive;
+}
+#sidebar {
+    min-width: 35%;
+    max-width: 35%;
+    min-height: 100vh;
+    transition: all 0.4s;
+    background-color: rgb(28, 37, 47);
+}
+#sidebar.active {
+    margin-left: -35%;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+/* media query controls sidebar when display is small */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -35%;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}

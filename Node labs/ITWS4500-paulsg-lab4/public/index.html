@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" sameSite="none">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <title>Paulsg - Lab4</title>
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+   rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+   crossorigin="anonymous">
+   <link rel="stylesheet" href="lab4.css">
+</head>
+<!-- angular module and controller function will be acceessible over the whole body -->
+
+<body ng-app="newsApp" ng-controller="ctrNews">
+   <h1 class="text-center display-3">Lab 4 Node Rules</h1>
+   <!-- <p class="text-center">empty search for top headlines!</p> -->
+   <form class="active-cyan-3 active-cyan-4 mb-4 searchBar">
+      <input type="text" id="name" name="keyW" ng-model="keyW" placeholder="Keyword Search" />
+      <!-- when search button is clicked getNews() function fires -->
+      <input type="submit" id="search" value="Search" ng-click="getNews()">
+      <!-- to get the top headlines click this button -->
+      <input type="submit" id="headline" name="headlines" value="Top Headlines" ng-click="getHead()">
+   </form>
+   <div class="container">
+      <div class="row">
+         <!-- after api call, all articles are looped through and displayed  -->
+         <section ng-repeat="article in news" class="col-sm-6 card">
+            <h4 class='text-center'> {{article.title}}</h4>
+            <a href="{{article.url}}">
+               <img class="img-thumbnail rounded mx-auto d-block" default="" ng-src="{{article.urlToImage}}" alt="article image">
+            </a>
+            <p class="center">{{article.description}}</p>
+            <h5 class=text-center>{{article.author}}</h5>
+            <p class="text-center">{{article.source.name}}</p>
+         </section>
+      </div>
+   </div>
+</body>
+<!-- scripts at bottom for better load time -->
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+<script type="text/javascript" src="lab4.js"></script>
+
+</html>
